@@ -1,0 +1,511 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Kdam+Thmor+Pro&family=Supermercado+One&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #161623;
+    
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f00, #f0f);
+    clip-path: circle(30% at right 70%);
+  }
+  
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(#2196f3, #e91e63); */
+    clip-path: circle(10% at 10% 10%);
+  }
+  
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    z-index: 1;
+  }
+  
+  .card img {
+    /* resimde kullanılan eksiklikler giderildi */
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 85px;
+    transition: 0.5s;
+  }
+  
+  .container .card {
+    position: relative;
+    width: 780px;
+    height: 620px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+  }
+  
+  .container .card .content {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .container .card .content {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  
+  .container .card .content h2 {
+    position: absolute;
+    top: -80px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+  }
+  
+  .container .card .content h3 {
+    font-size: 2.3em;
+    color: #fff;
+    z-index: 1;
+    font-family: 'Supermercado One', cursive;
+  }
+  
+  .container .card .content p {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+  }
+  
+  .container .card .content ul li a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 16px;
+    margin-top: 30px;
+    background: rgb(202, 196, 196);
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  .card li {
+    display: inline-block;
+    margin: 20px 10px;
+    list-style: none;
+  }
+  
+  .card li a:hover {
+    color: black;
+  }
+
+  .varType
+  {
+    position: absolute;
+    top: 245px;
+    left: 40px;
+    color: #da3633;
+  } 
+  .codeKey{
+    position: absolute;
+    top: 450px;
+    left: 100px;
+    color: #58a6ff;
+  }
+  .varStr{
+    color: #79c0ff;
+  }
+  .code1{
+    position: absolute;
+    top: 312px;
+    left: 195px;
+    color: #ffa657;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .code2{
+    position: absolute;
+    top: 312px;
+    left: 345px;
+    color: #ffa657;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .code3{
+    position: absolute;
+    top: 312px;
+    left: 415px;
+    color: #ffa657;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .code4{
+    position: absolute;
+    top: 312px;
+    left: 475px;
+    color: #ffa657;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .koseli-virgul
+  {
+    position: absolute;
+    top: 312px;
+    left: 515px;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .Tools
+  {
+    position: absolute;
+    top: 355px;
+    left: 85px;
+    color: #58a6ff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .noktali-kose
+  {
+    position: absolute;
+    top: 355px;
+    left: 150px;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .tool1
+  {
+    position: absolute;
+    top: 355px;
+    left: 200px;
+    color: #ffa657;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .tool2
+  {
+    position: absolute;
+    top: 355px;
+    left: 455px;
+    color: #ffa657;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  /* .tool3
+  {
+    position: absolute;
+    top: 355px;
+    left: 480px;
+    color: #ffa657;
+  } */
+  .tool4
+  {
+    position: absolute;
+    top: 355px;
+    left: 590px;
+    color: #ffa657;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .koselii-virgul
+  {
+    position: absolute;
+    top: 357px;
+    left: 640px; 
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .tech
+  {
+    position: absolute;
+    top: 393px;
+    left: 85px;
+    color: #58a6ff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .noktali-suslu
+  {
+    position: absolute;
+    top: 393px;
+    left: 285px;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .coorganize
+  {
+    position: absolute;
+    top: 425px;
+    left: 120px;
+    color: #58a6ff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .iki-nokta
+  {
+    position: absolute;
+    top: 425px;
+    left: 270px;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .Kodluyoruz
+  {
+    position: absolute;
+    top: 425px;
+    left: 287px;
+    color: #58a6ff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .k-virgul
+  {
+    position: absolute;
+    top: 425px;
+    left: 445px;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+
+  }
+  .Mentor
+  {
+    position: absolute;
+    top: 460px;
+    left: 120px;
+    color: #58a6ff;
+    font-family: 'IBM Plex Mono', monospace;
+
+  }
+  .ikili-nokta
+  {
+    position: absolute;
+    top: 460px;
+    left: 210px;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .Patika
+  {
+    position: absolute;
+    top: 460px;
+    left: 230px;
+    color: #58a6ff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .susluu
+  {
+    position: absolute;
+    top: 495px;
+    left: 112px;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .tool{
+    color: #ffa657;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .isaret{
+   
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .isim
+  {
+    position: absolute;
+    top: 245px;
+    left: 115px;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .esittir
+  {
+    position: absolute;
+    top: 245px;
+    left: 330px;
+    color: #58a6ff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .isaret-suslu
+  {
+    position: absolute;
+    top: 245px;
+    left: 365px;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .pronuns
+  {
+    position: absolute;
+    top: 280px;
+    left: 85px;
+    color: #58a6ff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .he
+  {
+    position: absolute;
+    top: 280px;
+    left: 200px;
+    color: #79c0ff;
+    font-family: 'IBM Plex Mono', monospace;
+
+  }
+  .his{
+    position: absolute;
+    top: 280px;
+    left: 273px;
+    color: #79c0ff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .duz
+  {
+    position: absolute;
+    top: 280px;
+    left: 263px;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .virgul
+  {
+    position: absolute;
+    top: 280px;
+    left: 355px;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+
+  }
+  .code-bas
+  {
+    position: absolute;
+    top: 315px;
+    left: 85px;
+    color: #58a6ff;
+    font-family: 'IBM Plex Mono', monospace;
+
+  }
+  .nokta-kose
+  {
+    position: absolute;
+    top: 312px;
+    left: 150px;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+
+  }
+  /* /* .yazi{
+    font-family: 'Nanum Pen Script', cursive;
+    
+  }/* */
+
+  .projects
+  {
+    font-size: 1.3em;
+    
+  }
+  .container .card .content  #projects::after
+{
+    content: '';
+    position: absolute;
+    background-color: #2240b9;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+      
+}
+.container .card .content  #projects:hover
+{
+    color: #4263bd;
+}
+.container .card .content  #projects:hover::after
+{
+    width: 100%;
+
+}
+#projects{
+    position: absolute;
+    top: 518px;
+    left: 20px;
+    animation: shake 5000ms forwards ease-in-out;
+    margin-top: 10px;
+
+    overflow: hidden;
+    display: block;
+    color: #c41e3d;
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace; 
+
+  }
+  .forMore a
+  {
+    position: absolute;
+    top: 475px;
+    right: 20px;
+    animation: none;
+    padding: 15px 20px;
+    color: #707070;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  #contact{
+    
+    position: absolute;
+    top: 555px;
+    left: 20px;
+    animation: shake 5000ms forwards ease-in-out;
+    margin-top: 10px;
+
+    overflow: hidden;
+    display: block;
+    color: #c41e3d;
+    text-decoration: none; 
+    font-family: 'IBM Plex Mono', monospace;
+
+  }
+  .social-menu
+  {
+    position: absolute;
+    top: 500px;
+    left: 280px;
+  }
+  .root
+  {
+    font-size: 22px;
+  }
+ .scorlling-text h3
+ {
+    font-size: 80px;
+    font-weight: 600;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+ }
+ .auto-type
+ {
+  color: #79c0ff;
+  font-family: 'Lobster', cursive;
+
+ }
+  

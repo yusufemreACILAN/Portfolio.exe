@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Kdam+Thmor+Pro&family=Nova+Script&family=Oleo+Script&family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #060608;
+    min-height: 180vh;
+
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 525px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#7dd87d, #00bbf0);
+    clip-path: circle(30% at right 70%);
+  }
+  
+  body .imgBx::after {
+    content: "";
+    position: absolute;
+    top: 150px;
+    left: 295px;
+    width: 100%;
+    height: 100%;
+     background: linear-gradient(#2195f381, #e91e6288); 
+    clip-path: circle(30% at 30% 40%);
+  }
+  body .imgBx::after {
+    content: "";
+    position: absolute;
+    top: -42px;
+    left: 295px;
+    width: 100%;
+    height: 168%;
+     background: linear-gradient(#2195f381, #e91e6288); 
+    clip-path: circle(30% at 30% 40%);
+  }
+hr
+{
+    position: absolute;
+    top: 65px;
+    left: 20px;
+    width: 68%;
+    border-style: solid;
+    color: #0070ff;
+    border-width: 2px;
+}
+.c-sharp
+{
+    position: absolute;
+    top: 68px;
+    left: 20px;
+    width: 68%;
+    border-style: solid;
+    color: #42b883;
+    border-width: 2px;
+}
+.star
+{
+    position: absolute;
+    top: 68px;
+    left: 20px;
+    width: 82%;
+    border-style: solid;
+    color: #9fd3c7;
+    border-width: 2px;
+}
+.menu
+{
+    position: absolute;
+    top: 65px;
+    left: 20px;
+    width: 45%;
+    border-style: solid;
+    color: #f95959;
+    border-width: 2px;
+}
+.protfolio
+{
+    position: absolute;
+    top: 65px;
+    left: 20px;
+    width: 42%;
+    border-style: solid;
+    color: #dc2f2f;
+    border-width: 2px;
+}
+.magic
+{
+    position: absolute;
+    top: 65px;
+    left: 20px;
+    width: 37%;
+    border-style: solid;
+    color: #f8b400;
+    border-width: 2px;
+}
+
+.container{
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+
+}
+
+.container .card{
+    position: relative;
+    height: 240px;
+    background: #fff;
+    display: flex;
+    width: 40%;
+    margin: 30px 0;
+
+}
+.container .card .content  i 
+{
+    position: absolute;
+    top: -115px;
+    left: -125px;
+    margin: 0;
+    /* width: 50px;
+    height: 50px;
+    background: yellow; */
+    font-weight: bold;
+    color: #fff;
+
+    
+}
+.container .card .content  i::after
+{
+    content: '';
+    position: absolute;
+    background-color: #2240b9;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+    
+
+    
+}
+.container .card .content  i:hover
+{
+    color: #4263bd;
+}
+.container .card .content  i:hover::after
+{
+    width: 100%;
+
+}
+
+
+.container .card .content  #back-to
+{
+   position: absolute;
+   top: -30px;
+   left: 25px;
+
+     /* width: 50px;
+    height: 50px; */
+    
+    font-weight: bold;
+    color: #fff;
+
+}
+
+
+
+/* ***********************goto project-start************************ */
+.container .card .content a{
+    position: absolute;
+    top: 180px;
+    left: 182px;
+    display: inline-block;
+    padding: 8px 20px; 
+    /* background: #000; */
+    margin-top: 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+    
+}
+.container .card .content a::after{
+    content: '';
+    position: absolute;
+    background-color: #2240b9;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+
+}
+.container .card .content a:hover
+{
+    color: #4263bd;
+
+}
+
+
+.container .card .content a:hover::after{
+    width: 95%;
+
+}
+/* ***********************goto project-finish************************ */
+.container .card .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222831;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:hover .imgBx{
+    width: 150px;
+    height: 150px;
+    left: -75px;
+    top: calc(50% - 75px);
+    transition: 0.5s ease-in-out;
+    background: #00bbf0;
+    
+
+
+}
+
+.container .card .imgBx::before
+{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 18%;
+    text-align: center;
+    font-size: 3em;
+    color: rgba(255,255,255,.05);
+    font-weight: 700;
+}
+
+.container .card .imgBx img
+{
+    position: absolute;
+    top: 25px;
+    max-width: 100px;
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:hover .imgBx img
+{
+    max-width: 75px;
+    transition: 0.5s ease-in-out;
+}
+.container .card:hover .imgBx img
+{
+    max-width: 90px;
+    
+}
+.container .card .content
+{
+    position: absolute;
+    right: 0;
+    width: calc(100% - 75px);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .card .content h3{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+
+}
+
+.container .card .content p
+{
+    position: absolute;
+    top: 75px;
+    left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Nova Script', cursive;
+
+}
+
+
+.container .card .content a
+{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    /* background: #333; */
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width:992px)
+{
+    .container
+    {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container .card
+    {
+        width: 400px;
+    }
+
+}
+
+@media (max-width:768px)
+{
+    .container .card
+    {
+        max-width: 300px;
+        flex-direction: column;
+        height: auto;
+    } 
+    .container .card .imgBx 
+    {
+        position: relative;
+    }
+    .container .card .imgBx, 
+    .container .card:hover .imgBx 
+    {
+        width: 100%;
+        height: 200px;
+        left: 0;
+    }
+    .container .card .imgBx img, 
+    .container .card:hover .imgBx img
+    {
+        max-width: 100px;
+
+    }
+    .container .card .content
+    {
+        position: relative;
+        width: 100%;
+
+    }
+}
+/* .container .card:hover .imgBx:nth-child(2) .content img 
+{
+    background: yellow;
+}  */
